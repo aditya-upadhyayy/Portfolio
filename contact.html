@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        :root{
+            --purple:#000000;
+            --purple-light:#30192d;
+            --dark-blue:#012677;
+            --blue:#5c65c0;
+            --skyblue :#00b4fc;
+            --light-blue:#005bc5;
+            --dark-pink:#f64c57;
+            --dark-magenta:#e21b5a;
+            --light-green:#61e2c2;
+            --light-purple:#d9abff;
+        }
+        body {
+            background: linear-gradient(70deg, var(--purple), var(--purple-light));
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Basic styling for the contact form */
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--purple);
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: var(--purple-light);
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        /* Styling for the menu */
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu to go back to home page -->
+    <div class="menu" onclick="goToHomePage()">Home</div>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="#" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="text" id="email" name="email" placeholder="Your Email">
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // You can add your form validation logic here before sending the data
+            // For example, check if name, email, and message fields are not empty
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all fields');
+                return;
+            }else{
+                alert('Request sended');
+            }
+            // If form is valid, you can send the data to the server
+            // Here, we're just logging the form data to the console
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+            // You can add AJAX code to send the form data to the server here
+            // For example, using fetch() or XMLHttpRequest
+        });
+
+        // Function to navigate back to home page
+        function goToHomePage() {
+            window.location.href = "index.html"; // Change "index.html" to your actual home page URL
+        }
+    </script>
+</body>
+</html>

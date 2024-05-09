@@ -1,0 +1,15 @@
+:root{
+    --purple:#000000;
+    --purple-light:#30192d;
+    --dark-blue:#012677;
+    --blue:#5c65c0;
+    --skyblue :#00b4fc;
+    --light-blue:#005bc5;
+    --dark-pink:#f64c57;
+    --dark-magenta:#e21b5a;
+    --light-green:#61e2c2;
+    --light-purple:#d9abff;
+}
+body{
+    background: linear-gradient(70deg, var(--purple),var(--purple-light));
+}

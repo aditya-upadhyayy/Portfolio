@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website designing -K2inofocom</title>
+    <!---external css ---->
+    <link rel="stylesheet" href="style.css">
+    <!---font awesome cdn for font icons---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+   <!-- particles.js container -->
+
+   <header>
+      <div class="menu">
+          <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </header>
+  
+   <div class="container">
+       <div class="profile-card"> 
+            <div class="profile-pic">
+                <img src="images/logo.png" alt="user avatar">
+            </div>
+
+            <div class="profile-details">
+                 <div class="intro">
+                    <h2>Aditya Upadhyay</h2>
+                    <h4>Web Developer</h4>
+                    <div class="social">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook" style="color:var(--blue)"></i></a>
+                        <a href="https://twitter.com/home"><i class="fab fa-twitter"  style="color:var(--skyblue)"></i></a>
+                        <a href="https://dribbble.com/"><i class="fab fa-dribbble"  style="color:var(--dark-pink)"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"  style="color:var(--light-blue)"></i></a>
+                    </div>
+                 </div>
+
+                 <div class="contact-info">
+                    <div class="row">
+                         <div class="icon">
+                            <i class="fa fa-phone"  style="color:var(--dark-magenta)"></i>
+                         </div>
+                         <div class="content">
+                            <span>Phone</span>
+                            <h5>+91 6386121078</h5>
+                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="icon">
+                           <i class="fa fa-envelope-open"  style="color:var(--light-green)"></i>
+                        </div>
+                        <div class="content">
+                           <span>Email</span>
+                           <h5>adityaup0304@gmail.com</h5>
+                        </div>
+                   </div>
+    
+                   <div class="row">
+                    <div class="icon">
+                       <i class="fa fa-map-marker"  style="color:var(--light-purple)"></i>
+                    </div>
+                    <div class="content">
+                       <span>Location</span>
+                       <h5>Banglore</h5>
+                    </div>
+                 </div>
+
+            </div>
+            <button class="download-btn" id="downloadBtn"> <i class="fa fa-download"></i>Download CV</button>
+
+            </div>
+       </div>
+
+       <!----about section ----->
+       <div class="about">
+           <h1>About Me</h1>
+
+           <p> I'm Creative Director and UI/UX Designer from Sydney, Australia,  
+            working in web development and print media.I enjoy turning complex problems into simple, 
+            beautiful and intuitive designs.
+          </p>
+
+          </p>
+          <h2>What I Do !!!</h2>
+          <div class="work">
+             <div class="workbox">
+                 <div class="icon">
+                    <img src="images/ui.svg" alt="">
+                 </div>
+                 <div class="desc">
+                    <h3>UI/UX Designer</h3>
+                    <p>A UI/UX designer creates visually appealing and user-friendly interfaces for digital products to enhance user experience.</p>
+                 </div>
+             </div>
+
+             <div class="workbox">
+                <div class="icon">
+                   <img src="images/app.svg" alt="">
+                </div>
+                <div class="desc">
+                   <h3>App Developement</h3>
+                   <p>App development involves creating software applications specifically designed to run on mobile devices such as smartphones and tablets.</p>
+                </div>
+            </div>
+
+            <div class="workbox">
+                <div class="icon">
+                   <img src="images/api.svg" alt="">
+                </div>
+                <div class="desc">
+                   <h3>API Developement</h3>
+                   <p>API development involves designing and building Application Programming Interfaces (APIs) that allow different software applications to communicate and interact with each other.</p>
+                </div>
+            </div>
+
+            <div class="workbox">
+                <div class="icon">
+                   <img src="images/web.svg" alt="">
+                </div>
+                <div class="desc">
+                   <h3>Web Developement</h3>
+                   <p>Web development involves designing, building, and maintaining websites and web applications for the internet or an intranet.</p>
+                </div>
+            </div>
+          </div>
+       </div>
+   </div>
+   <script>
+      // Get the download button element
+      var downloadBtn = document.getElementById('downloadBtn');
+
+      // Add click event listener to the download button
+      downloadBtn.addEventListener('click', function() {
+          // Replace 'path_to_your_resume.pdf' with the path to your resume PDF file
+          var popupWindow = window.open('adityacv.pdf', '_blank', 'width=600,height=400');
+          
+          // Redirect to full-screen resume when the popup window is clicked
+          popupWindow.addEventListener('click', function() {
+              // Replace 'path_to_your_full_screen_resume.pdf' with the path to your full-screen resume PDF file
+              window.location.href = 'adityacv.pdf';
+          });
+      });
+  </script>
+
+</body>
+
+</html>
